@@ -1,0 +1,179 @@
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --less-bright-blue: hsl(245, 75%, 62%);
+    --space-between-row: 1.5rem;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("/assets/pattern-background-desktop.svg");
+    background-color: var(--pale-blue);
+    background-blend-mode: normal;
+    background-repeat: repeat-x;
+    font-family: "Red Hat Display", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    width: 90%;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Normal */
+
+.text-dark-blue{
+    color: var(--dark-blue);
+}
+
+.text-desaturated-blue{
+    color: var(--desaturated-blue);
+}
+
+.text-font-700{
+    font-weight: 700;
+}
+
+
+/* Inside Main */
+
+.hero-image{
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+main > div{
+    width: 100%;
+    padding: 3rem 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space-between-row);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: white;
+}
+
+h3{
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.info-and-subscription-plan{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space-between-row);
+}
+
+.info-para{
+    line-height: 1.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+
+/* Subsciption Plan */
+
+.subscription-plan{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.subscription-plan > div{
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: .3rem;
+}
+
+.change-plan{
+    color: var(--bright-blue);
+    font-size: .9rem;
+    text-decoration: underline;
+}
+
+.change-plan:hover{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--desaturated-blue);
+}
+
+/* Proceed and Cancel Button */
+
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+
+button{
+    font-size: 1rem;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.bt1{
+    border: none;
+    height: 3rem;
+    border-radius: 15px;
+    background-color: var(--bright-blue);
+    width: 100%;
+    color: white;
+    box-shadow: var(--pale-blue) 5px 15px 20px;
+}
+
+.bt1:hover{
+    background-color: var(--less-bright-blue);
+}
+
+.bt2{
+    border: none;
+    background: none;
+}
+
+.bt2:hover{
+    color: var(--dark-blue);
+}
+
+
+@media  (max-width: 540px) {
+
+    main > div{
+        padding: 2rem 2rem;
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+
+    .info-and-subscription-plan{
+        width: 95%;
+        max-width: 20rem;
+    }
+}
+
+
